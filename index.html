@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Official website of Blu Raspberry and the Gosh Darnits. Music, live shows, merch and mailing list.">
+  <title>Blu Raspberry and the Gosh Darnits</title>
+  <style>
+    :root{--black:#000;--white:#fff;--pink:#f3a0c4;--grey:#a0a0a0;--line:#333}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{background:var(--black);color:var(--white);font-family:Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 6%;background:rgba(0,0,0,.96);border-bottom:1px solid var(--line)}
+    .logo{font-size:15px;font-weight:900;letter-spacing:-.4px;line-height:1.2}
+    nav{display:flex;flex-wrap:wrap;gap:25px}
+    nav a{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    nav a:hover,.text-link:hover{color:var(--pink)}
+    .hero{padding:26px 5% 75px;text-align:center}
+    .hero-image{display:block;width:100%;max-height:720px;object-fit:contain;margin:0 auto 40px}
+    .hero h1{max-width:1100px;margin:0 auto;font-size:clamp(34px,7vw,88px);font-weight:900;letter-spacing:-.055em;line-height:.98;text-transform:uppercase}
+    .hero p{margin:24px 0;color:#d0d0d0;font-size:14px}
+    .button{display:inline-block;padding:12px 21px;border:1px solid var(--white);font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;transition:background .2s,color .2s}
+    .button:hover{background:var(--white);color:var(--black)}
+    .button.pink{background:var(--pink);border-color:var(--pink);color:var(--black)}
+    .button.pink:hover{background:var(--white);border-color:var(--white)}
+    section{padding:90px 10%;border-top:1px solid var(--line)}
+    .section-inner{max-width:1000px;margin:0 auto}
+    .section-number{margin-bottom:12px;color:var(--pink);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+    h2{margin-bottom:25px;font-size:clamp(42px,7vw,76px);font-weight:900;letter-spacing:-.055em;line-height:1;text-transform:uppercase}
+    .intro{max-width:560px;margin-bottom:30px;color:#ccc;font-size:15px}
+    .link-list{border-top:1px solid var(--line)}
+    .link-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);font-size:17px;font-weight:800;text-transform:uppercase}
+    .link-row span:last-child{color:var(--pink)}
+    .link-row:hover{color:var(--pink)}
+    .tour-date{display:grid;grid-template-columns:125px 1fr auto;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+    .tour-date:first-child{border-top:1px solid var(--line)}
+    .tour-date time{font-weight:900;font-size:14px}
+    .tour-date h3{font-size:17px;font-weight:800}
+    .tour-date p{color:var(--grey);font-size:13px}
+    .tour-empty{padding:24px 0;border-top:1px solid var(--line);color:#ccc}
+    .store-panel{padding:35px;border:1px solid var(--line)}
+    .store-panel p{max-width:500px;margin-bottom:25px;color:#ccc}
+    .mailing-form{display:flex;max-width:620px;gap:10px;margin-top:28px}
+    .mailing-form input{flex:1;min-width:0;padding:15px;background:#111;color:var(--white);border:1px solid #555;border-radius:0;font:inherit;font-size:14px}
+    .mailing-form input:focus{outline:2px solid var(--pink);outline-offset:2px}
+    .mailing-form button{cursor:pointer;padding:15px 20px;background:var(--pink);color:var(--black);border:1px solid var(--pink);font-family:inherit;font-size:11px;font-weight:900;letter-spacing:1px}
+    .mailing-form button:hover{background:var(--white);border-color:var(--white)}
+    .form-note{margin-top:15px;color:var(--grey);font-size:11px}
+    footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px 6%;border-top:1px solid var(--line);color:var(--grey);font-size:11px}
+    footer strong{color:var(--white)}
+    @media(max-width:650px){
+      header{align-items:flex-start;flex-direction:column;padding:18px 5%}
+      nav{gap:18px}nav a{font-size:10px}
+      .hero{padding:18px 4% 55px}.hero-image{max-height:480px;margin-bottom:30px}
+      section{padding:65px 7%}
+      .tour-date{grid-template-columns:1fr auto;gap:8px 15px}
+      .tour-date time{grid-column:1/-1}
+      .tour-date .ticket-link{grid-column:2;grid-row:2/span 2}
+      .store-panel{padding:24px}
+      .mailing-form{flex-direction:column}.mailing-form button{width:100%}
+      footer{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">BLU RASPBERRY<br>&amp; THE GOSH DARNITS</a>
+    <nav aria-label="Main navigation">
+      <a href="#listen">Listen now</a><a href="#tour">Tour</a><a href="#store">Store</a><a href="#mailing-list">Mailing list</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero" id="home">
+      <img class="hero-image" src="assets/hero.jpg" alt="Blu Raspberry and the Gosh Darnits band artwork">
+      <h1>Blu Raspberry<br>&amp; the Gosh Darnits</h1>
+      <p>Independent music. Loud guitars. No apologies.</p>
+      <a class="button pink" href="#listen">Listen now ↗</a>
+    </div>
+    <section id="listen"><div class="section-inner">
+      <p class="section-number">01 / Music</p><h2>Listen now.</h2>
+      <p class="intro">Our music, wherever you like to listen. Find our debut EP, <em>When Life Gives You Demons</em>, and give it a spin.</p>
+      <div class="link-list">
+        <!-- Replace # with your actual streaming URLs -->
+        <a class="link-row" href="#" target="_blank" rel="noopener noreferrer"><span>Spotify</span><span>↗</span></a>
+        <a class="link-row" href="#" target="_blank" rel="noopener noreferrer"><span>Apple Music</span><span>↗</span></a>
+        <a class="link-row" href="#" target="_blank" rel="noopener noreferrer"><span>Bandcamp</span><span>↗</span></a>
+        <a class="link-row" href="#" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span>↗</span></a>
+      </div>
+    </div></section>
+    <section id="tour"><div class="section-inner">
+      <p class="section-number">02 / Live</p><h2>Tour dates.</h2>
+      <p class="intro">Come see us, sing along and make a little noise.</p>
+      <div class="tour-empty">New shows coming soon. Keep an eye on this page for gig announcements.</div>
+      <!-- Copy this example for each gig:
+      <article class="tour-date">
+        <time datetime="2027-03-20">20 MAR 2027</time>
+        <div><h3>Venue name</h3><p>Town, UK</p></div>
+        <a class="button ticket-link" href="TICKET_URL">Tickets ↗</a>
+      </article>
+      -->
+    </div></section>
+    <section id="store"><div class="section-inner">
+      <p class="section-number">03 / Merch</p><h2>The store.</h2>
+      <div class="store-panel">
+        <p>T-shirts, merch and other essential band-related nonsense. Get yours from our online shop.</p>
+        <a class="button pink" href="https://www.bluraspberryandthegoshdarnits.bigcartel.com" target="_blank" rel="noopener noreferrer">Shop merch ↗</a>
+      </div>
+    </div></section>
+    <section id="mailing-list"><div class="section-inner">
+      <p class="section-number">04 / Stay in touch</p><h2>Join the list.</h2>
+      <p class="intro">Gig announcements, new music, merch drops and occasional messages from us. Straight to your inbox.</p>
+      <!-- Connect this form to a mailing-list provider before collecting subscribers. -->
+      <form class="mailing-form" id="mailing-form">
+        <label for="email" hidden>Your email address</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" autocomplete="email" required>
+        <button type="submit">Sign me up ↗</button>
+      </form>
+      <p class="form-note" id="form-note">The mailing list isn't connected yet. Once connected, we'll only use your address for band updates. Unsubscribe whenever you like.</p>
+    </div></section>
+  </main>
+  <footer><strong>Blu Raspberry and the Gosh Darnits</strong><span>© <span id="year"></span> All rights reserved.</span></footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("mailing-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("form-note").textContent =
+        "The mailing list is not connected yet, so your address has not been submitted.";
+    });
+  </script>
+</body>
+</html>
